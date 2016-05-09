@@ -9,6 +9,8 @@ namespace IPZ_lex
     class variable_used
     {
 
+        
+
         List<Colection> doubleIndetifer = new List<Colection>
         {
             new Colection() {Name = "LINK", Number = 401 }
@@ -57,10 +59,12 @@ namespace IPZ_lex
             return "-1";
         }
 
+        
 
+        //temp
         private void read_char(string programText)
         {
-            string[] lineForWord = new string[3];
+            List<Colection> lineForWord = new List<Colection> { };
             string words = "";
             int number_word = 0;
 
@@ -76,7 +80,11 @@ namespace IPZ_lex
                         case ';':
                         case ',':
                             if (words.Length > 0)
-                                lineForWord[number_word++] = words;
+                            {
+                                lineForWord.Add(new Colection() { Name = words });
+                                ++number_word;
+                            }
+                                //lineForWord[number_word++] = words;
                             words = "";
                             //function analizer
                             break;
@@ -98,7 +106,9 @@ namespace IPZ_lex
                     return;
                 }
             }
-            lineForWord[number_word++] = words;
+            ++number_word;
+            lineForWord.Add(new Colection() { Name = words });
+            //lineForWord[number_word++] = words;
             //number_word++;
             //function analizer
         }
