@@ -62,6 +62,7 @@
             this.variable.Size = new System.Drawing.Size(158, 281);
             this.variable.TabIndex = 2;
             this.variable.Text = "";
+            this.variable.TextChanged += new System.EventHandler(this.variable_TextChanged);
             // 
             // programOut
             // 
@@ -70,6 +71,7 @@
             this.programOut.Size = new System.Drawing.Size(158, 281);
             this.programOut.TabIndex = 3;
             this.programOut.Text = "";
+            this.programOut.TextChanged += new System.EventHandler(this.programOut_TextChanged);
             // 
             // compile
             // 

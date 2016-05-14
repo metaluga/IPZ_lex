@@ -11,7 +11,7 @@ namespace IPZ_lex
 
         
 
-        List<Colection> doubleIndetifer = new List<Colection>
+        public static List<Colection> doubleIndetifer = new List<Colection>
         {
             new Colection() {Name = "LINK", Number = 401 }
         };

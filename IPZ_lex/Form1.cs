@@ -57,7 +57,22 @@ namespace IPZ_lex
 
         private void compile_Click(object sender, EventArgs e)
         {
-            variable.Text = programBox.Text;
+            //variable.Text = programBox.Text;
+            programReader.reader(programBox.Text);
+            foreach (string i in programReader.programWords)
+            {
+                variable.Text += "\n" +i; 
+            }
+        }
+
+        private void variable_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void programOut_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

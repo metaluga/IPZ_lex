@@ -8,14 +8,56 @@ namespace IPZ_lex
 {
     class programReader
     {
-        List<string> programWords = new List<string>(); // all words in my program
+        public static List<string> programWords = new List<string>(); // all words in my program
 
-        public void reader (string programText)
+        public static void reader (string programText)
         {
+            bool halfComent = false , coment = false;
             string expression = "";
             bool declarationSymbol = true;
             foreach (char i in programText)
             {
+
+                //----coment deleted start -----
+              /*  if (coment && !halfComent)
+                    if (i==')')
+                    {
+                        coment = false;
+                        continue;
+                    }
+                    else
+                    {
+                        halfComent = true;
+                    }
+
+
+
+                if (coment)
+                {
+                    if (i != '*')
+                        continue;
+                    else
+                        halfComent = false;
+                }
+
+                if ((i=='*') && halfComent)
+                {
+                    coment = true;
+                    continue;
+                }
+                else
+                {
+                    expression += '(';
+                }
+
+                if (i == '(')
+                {
+                    halfComent = true;
+                    continue;
+                }
+                */
+                //-------coment del finish------
+
                 if (!((((int)i >= 48) && ((int)i <= 90)) || (((int)i == 32) || ((int)i >= 9) && (int)i <= 13)))
                     declarationSymbol = false;
 
@@ -28,12 +70,12 @@ namespace IPZ_lex
                     }
                     else
                     {
-                        programWords.Add("Error! Unknown symbol");
+                        programWords.Add("Error");
                         expression = "";
                         declarationSymbol = true;
                     }
                 }
-                else if ((i == ',') || (i == '.') || (i == ';'))
+                else if ((i == ',') || (i == '.') || (i == ';') || (i == ' '))
                 {
                     if (declarationSymbol)
                     {
@@ -42,7 +84,7 @@ namespace IPZ_lex
                     }
                     else
                     {
-                        programWords.Add("Error! Unknown symbol");
+                        programWords.Add("Error");
                         expression = "";
                         declarationSymbol = true;
                     }
