@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var salmons = new List<string> { "chinook", "coho", "pink", "sockeye" };
+
+            salmons.Add{"ew" };
+
+            Console.Write(salmons.Count);
+
+        }
+    }
+}
