@@ -61,7 +61,7 @@ namespace IPZ_lex
             programReader.reader(programBox.Text);
             foreach (string i in programReader.programWords)
             {
-                variable.Text += "\n" +i; 
+                variable.Text += i; 
             }
         }
 

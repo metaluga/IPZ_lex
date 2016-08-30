@@ -8,6 +8,17 @@ namespace IPZ_lex
 {
     class variable_used
     {
+        
+
+        public static List<Colection> program = new List<Colection>
+        {
+            new Colection() {Name = "PROGRAM", Number = 401 }
+        };
+
+        public static List<Colection> declaration = new List<Colection>
+        {
+            new Colection() {Name = "LABEL", Number = 402 }
+        };
 
         
 
@@ -32,8 +43,8 @@ namespace IPZ_lex
             new Colection() {Name = "END", Number = 409 }
         };
 
-
-        List<Colection> myVariable = new List<Colection> { };
+        
+        public static List<Colection> myVariable = new List<Colection> { };
         //  {"PROGRAM", "BEGIN", "END", "LABEL", "GOTO", "LINK", "IN", "OUT"}; 
 
 
