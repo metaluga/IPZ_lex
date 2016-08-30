@@ -52,6 +52,7 @@ namespace IPZ_lex
         {
             
             oneSybol(i.Name, myProgram);
+            //test
 
         }
 
